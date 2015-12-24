@@ -1,0 +1,69 @@
+h2 {
+    font-size: 22px;
+    line-height: 1.2;
+    font-weight: 600;
+    border-bottom: 1px solid #B6B6B6;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.pw-container {
+    color: #CFD8DC;
+    background-color: #455A64;
+    font-weight: 600;
+}
+
+body {
+    background-color: #CFD8DC;
+}
+
+input {
+    padding: 10px;
+    width: 85%;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border: 0;
+    box-sizing: border-box;
+    color: #727272;
+}
+
+.pwd {
+    margin-bottom:10px;
+}
+
+.validator-label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #CFD8DC;
+    letter-spacing: 0.3px;
+}
+
+.green {
+    color: #4CAF50;
+}
+
+.buttonenabled {
+    background-color: #4CAF50;
+}
+
+.failed-count {
+    padding-top: 5px;
+    padding-bottom:5px;
+    border-bottom: 1px solid #B6B6B6;
+}
+
+.set-pwd-button {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    float: right;
+    border-radius: 2px;
+    text-transform: uppercase;
+    line-height: 2.2;
+}
+
+button:disabled {
+    background-color: #B6B6B6;
+}

@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SWM Tarif Berater</title>
+    <title>Passeword Setter</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="index.css">
 </head>
-<body ng-app="app">
-<div class="page-header">
-    <h1>Password Management</h1>
-</div>
-<div class="panel">
-    <div class="input-group">
-        <input class="form-control"/>
-<span class="input-group-btn">
-<button class="btn btn-default">Add</button>
-</span>
-    </div>
-</div>
+<body ng-controller="passwordController as pwdCtrl">
+<div ng-view></div>
+
+<script src="../node_modules/angular/angular.js"></script>
+<script src="../node_modules/angular-route/angular-route.js"></script>
 <script src="index.js"></script>
+<script src="utils/validator.js"></script>
+<script src="controllers/pwdcontroller.js"></script>
 </body>
 </html>

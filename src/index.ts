@@ -1,7 +1,12 @@
 'use strict';
-/// <reference path="../typings/angularjs/angular.d.ts" />
-import * as angular from 'angular';
+var appModule = angular.module('app', ['ngRoute']);
+appModule.config(["$routeProvider", ($routeProvider:ng.route.IRouteProvider) => {
+    $routeProvider.otherwise({redirectTo: '/'});
 
-var app: angular.IModule = angular.module('app', []);
-
-//var app = angular.module('app', []);
+    $routeProvider.when('/', {
+        templateUrl: 'passwordsetter.html'
+    });
+    $routeProvider.when('/pwdview/', {
+        templateUrl: 'passwordviewer.html'
+    });
+}]);
