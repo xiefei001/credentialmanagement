@@ -2,6 +2,7 @@ namespace validator {
     interface Validator {
         content: string;
         isValid(str:string):boolean;
+
     }
 
     class NotEmptyChar implements Validator {
@@ -26,14 +27,14 @@ namespace validator {
     }
 
     class ContainsLowerChar implements Validator {
-        content:string = "Contains lowercase letters.";
+        content:string = "Contains lowercase letter.";
         isValid(str:string) {
             return str == null ? false : /[a-z]/.test(str);
         }
     }
 
     class Punctuation implements Validator {
-        content:string = "Contains punctuation.";
+        content:string = "Contains special characters.";
         isValid(str:string) {
             return str == null ? false : (/['!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~']/).test(str);
         }
