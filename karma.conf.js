@@ -1,32 +1,38 @@
-module.exports = function(config){
-  config.set({
+module.exports = function (config) {
+    config.set({
 
-    basePath : './',
+        basePath: './',
 
-    files : [
-      'node_modules/angular/angular.js',
-      'node_modules/angular-route/angular-route.js',
-      'src/**/*.js'
+        files: [
+            'node_modules/angular/angular.js',
+            'node_modules/angular-route/angular-route.js',
+            'src/*.js',
+            'src/**/*.js',
+            'tests/**/*.js'
+        ],
+        preprocessors: {
+            "**/*.js": "coverage"
+        },
+        autoWatch: true,
+        singleRun: true,
+        port: 9876,
 
-    ],
+        frameworks: ['jasmine'],
 
-    autoWatch : true,
-
-    frameworks: ['jasmine'],
-
-    browsers : ['Chrome'],
-
-    plugins : [
+        reporters: ['progress', 'coverage'],
+        browsers: ['Chrome'],
+        color: true,
+        logLevel: config.LOG_INFO,
+        plugins: [
             'karma-chrome-launcher',
-            'karma-firefox-launcher',
             'karma-jasmine',
             'karma-junit-reporter'
-            ],
+        ],
 
-    junitReporter : {
-      outputFile: 'test_out/unit.xml',
-      suite: 'unit'
-    }
+        junitReporter: {
+            outputFile: 'tests/unit.xml',
+            suite: 'unit'
+        }
 
-  });
+    });
 };
